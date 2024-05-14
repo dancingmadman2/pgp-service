@@ -5,7 +5,7 @@ const InfoSection: React.FC = () => {
     <div className="info-section">
       <h3>Security and Open Source</h3>
       <p>
-        All of the cryptographic operations are performed entirely on the client-side, meaning your private keys and decrypted messages never leave your device.
+        All of the cryptographic operations are performed entirely on the client-side, meaning your private keys and decrypted messages never leave your device. None of the information is stored.
       </p>
       <p>
         The project is open-source, and you can review the source code on GitHub.
