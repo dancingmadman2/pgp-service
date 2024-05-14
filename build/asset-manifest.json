@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pgp-service/static/css/main.76b97314.css",
+    "main.js": "/pgp-service/static/js/main.46b4c518.js",
+    "static/js/453.be35c12d.chunk.js": "/pgp-service/static/js/453.be35c12d.chunk.js",
+    "index.html": "/pgp-service/index.html",
+    "main.76b97314.css.map": "/pgp-service/static/css/main.76b97314.css.map",
+    "main.46b4c518.js.map": "/pgp-service/static/js/main.46b4c518.js.map",
+    "453.be35c12d.chunk.js.map": "/pgp-service/static/js/453.be35c12d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76b97314.css",
+    "static/js/main.46b4c518.js"
+  ]
+}
