@@ -4,7 +4,7 @@ A simple and secure PGP encryption/decryption service built with React. This app
 
 ## Demo
 
-Check out the live demo: [PGP Service Demo](https://dancingmadman2.github.io/pgp-service/)
+Live demo: [PGP Service Demo](https://dancingmadman2.github.io/pgp-service/)
 
 ### Encrypt Messages
 
