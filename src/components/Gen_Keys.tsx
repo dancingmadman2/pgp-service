@@ -33,6 +33,7 @@ const GenerateKeys: React.FC = () => {
       setPrivateKey(privateKey);
     } catch (error) {
       console.error('Error generating keys:', error);
+      setError(`Error generating keys: ${error}`);
     }
   };
 

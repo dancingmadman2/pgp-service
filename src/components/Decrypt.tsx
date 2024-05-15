@@ -20,9 +20,17 @@ const DecryptMessage: React.FC = () => {
         decryptionKeys: privateKeyObject,
       });
       setDecryptedMessage(decrypted as string);
-    } catch (error) {
+    } catch (error:any) {
       console.error('Error decrypting message:', error);
-      setDecryptedMessage('Error decrypting message');
+
+      if (error.message.includes('Ascii armor integrity check failed')) {
+        setDecryptedMessage('Incorrect message or private key.');
+      } else if (error.message.includes('Incorrect key passphrase')) {
+        setDecryptedMessage('Incorrect passphrase.');
+      } else {
+        setDecryptedMessage('Error decrypting message. Please check the inputs.');
+      }
+      //setDecryptedMessage(`${error}`);
     }
   };
 
