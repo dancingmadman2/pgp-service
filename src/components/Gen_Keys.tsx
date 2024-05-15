@@ -9,8 +9,19 @@ const GenerateKeys: React.FC = () => {
   const [userName, setUserName] = useState('');
   const [publicKey, setPublicKey] = useState('');
   const [privateKey, setPrivateKey] = useState('');
+  const [error, setError] = useState('');
 
   const handleGenerateKeys = async () => {
+    
+    if(!passphrase){
+      setError('Enter passphrase');
+      setPublicKey('');
+      setPrivateKey('');
+      return;
+    }
+
+    setError('');
+
     try {
       const { privateKey, publicKey } = await openpgp.generateKey({
         type: keyType,
@@ -36,6 +47,7 @@ const GenerateKeys: React.FC = () => {
             value={passphrase}
             onChange={(e) => setPassphrase(e.target.value)}
             placeholder="Enter a passphrase for your private key"
+            required
           />
         </label>
       </div>
@@ -72,6 +84,12 @@ const GenerateKeys: React.FC = () => {
         </label>
       </div>
       <button onClick={handleGenerateKeys}>Generate Keys</button>
+      {error && (
+        <div className="copy-container">
+          <pre>{error}</pre>
+          <CopyButton textToCopy={error} />
+        </div>
+      )}
       {publicKey && (
         <div className="copy-container">
           <h3>Public Key:</h3>
