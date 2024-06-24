@@ -1,6 +1,6 @@
 # PGP Service
 
-A simple and secure PGP encryption/decryption service built with React. This application allows users to encrypt and decrypt messages, generate public and private keys, and ensures that all cryptographic operations are performed on the client-side for enhanced security.
+A simple and secure PGP encryption/decryption service built with React. This application allows users to encrypt and decrypt messages, generate public and private keys.
 
 ## Demo
 
